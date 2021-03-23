@@ -108,7 +108,7 @@ Pod::Spec.new do |spec|
 
   # spec.preserve_paths = "FilesToSave", "MoreFilesToSave"
   
-  spec.resource = "Assets/NTESResource.bundle"
+    # spec.resource = "Assets/NTESResource.bundle"
 
 
 
