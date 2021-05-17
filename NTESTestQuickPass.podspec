@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "NTESTestQuickPass"
-  spec.version      = "1.0"
+  spec.version      = "1.1"
   spec.summary      = "NTESTestQuickPass."
 
   # This description is used to generate tags and improve search results.
@@ -92,7 +92,7 @@ Pod::Spec.new do |spec|
    # spec.source_files  = "Classes", "Classes/**/*.{h,m}"
    # spec.exclude_files = "Classes/Exclude"
 
-  # spec.public_header_files = "Classes/**/*.h"
+  # spec.public_header_files = "Classes/NTESQuickPass/*.h"
 
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -108,7 +108,7 @@ Pod::Spec.new do |spec|
 
   # spec.preserve_paths = "FilesToSave", "MoreFilesToSave"
   
-    # spec.resource = "Assets/NTESResource.bundle"
+   spec.resource = "Assets/NTESResource.bundle"
 
 
 
@@ -124,7 +124,7 @@ Pod::Spec.new do |spec|
   # spec.library   = "iconv"
   # spec.libraries = "iconv", "xml2"
   
-    spec.vendored_frameworks = ["Classes/NTESQuickPass.framework","Classes/WYEAccountApiSDK.framework","Classes/WYOAuth.framework","Classes/WYTYRZUISDK.framework"]
+    spec.vendored_frameworks = ["Classes/NTESQuickPass.framework","Classes/WYEAccountApiSDK.framework","Classes/WYOAuth.framework","Classes/WYTYRZUISDK.framework","NTESBaseComponent.framework"]
   
   spec.libraries = "c++.1"
 

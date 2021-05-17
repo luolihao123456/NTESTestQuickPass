@@ -82,6 +82,9 @@ NS_ASSUME_NONNULL_BEGIN
 /**授权界面自定义控件View的Block*/
 @property (nonatomic, copy) AuthCustomViewBlock customViewBlock;
 
+/**present 控制器的展示方式。 如果弹窗模式下。modalPresentationStyle为UIModalPresentationOverFullScreen */
+@property (nonatomic, assign) UIModalPresentationStyle modalPresentationStyle;
+
 /**授权页转场动画
  UIModalTransitionStyleCoverVertical, 下推
  UIModalTransitionStyleFlipHorizontal,翻转
@@ -325,6 +328,18 @@ NS_ASSUME_NONNULL_BEGIN
 /**登录按钮的高度，默认44*/
 @property (nonatomic, assign) CGFloat logBtnHeight;
 
+/**设置渐变颜色方向，左上点为(0,0), 右下点为(1,1)*/
+@property (nonatomic, assign) CGPoint startPoint;
+
+/**设置渐变颜色方向，左上点为(0,0), 右下点为(1,1)*/
+@property (nonatomic, assign) CGPoint endPoint;
+
+/**设置颜色变化点，取值范围 0.0~1.0 */
+@property(nonatomic, nullable, copy) NSArray<NSNumber *> *locations;
+
+/**创建渐变色数组，需要转换为CGColor颜色  */
+@property(nonatomic, nullable, copy) NSArray *colors;
+
 #pragma mark -------------------------- 复选框
 
 /**复选框未选中时图片*/
@@ -360,6 +375,12 @@ NS_ASSUME_NONNULL_BEGIN
    展示：  登录并同意中国移动条款协议和易盾协议1、网易协议2登录并支持一键登录
  */
 @property (nonatomic, copy) NSString *appPrivacyText;
+
+/**隐私协议的行间距, 默认是1*/
+@property (nonatomic, assign) int appPrivacyLineSpacing;
+
+/**隐私协议的字间距, 默认是0*/
+@property (nonatomic, assign) int appPrivacyWordSpacing;
 
 /**是否隐藏"《默认》" 两边的《》，默认不隐藏*/
 @property (nonatomic, assign) BOOL shouldHiddenPrivacyMarks;
@@ -408,6 +429,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**用户协议界面，导航栏返回图标，默认用导航栏返回图标 */
 @property (nonatomic, strong) UIImage *privacyNavReturnImg;
+
+/**用户协议界面，进度条颜色 */
+@property (nonatomic, strong) UIColor *progressColor;
+
+
 
 #pragma mark ----------------------弹窗:(温馨提示:由于受屏幕影响，小屏幕（5S,5E,5）需要改动字体和另自适应和布局)--------------------
 #pragma mark --------------------------窗口模式（居中弹窗, 底部半屏弹窗）
